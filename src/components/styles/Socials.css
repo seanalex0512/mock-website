@@ -1,0 +1,159 @@
+.socials-section {
+    background: #181b20;
+    padding: 48px 0 60px 0;
+    text-align: center;
+  }
+  
+  /* New container for both cards and button */
+  .socials-container {
+    max-width: 1300px;
+    margin: 0 auto 36px auto;
+    padding: 0 24px;
+  }
+  
+  .socials-list {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+
+  }
+  
+  .social-card {
+    background: transparent;
+    border: 1px solid #888;
+    border-radius: 4px;
+    width: 270px;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  
+  .social-card-top {
+    background: #888;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .social-card.highlight .social-card-top {
+    background: #1abc9c;
+  }
+  
+  .socials-photo-placeholder {
+    width: 100%;
+    height: 100%;
+    background: #888;
+  }
+  
+  .socials-icons-img {
+    max-width: 120px;
+    max-height: 60px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .social-card-bottom {
+    background: #23262b;
+    color: #fff;
+    padding: 24px 16px 16px 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .social-card-name-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    background: transparent;
+    border-radius: 4px;
+    padding: 0;
+    min-height: 44px;
+  }
+  
+  .social-card.highlight .social-card-name-bg {
+    background: #333333;
+    padding: 8px 0;
+    border-radius: 4px;
+  }
+  
+  .social-card-name-btn {
+    background: #1abc9c;
+    color: #fff;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 1rem;
+    display: inline-block;
+    border: none;
+    transition: all 0.2s;
+    margin-bottom: 0;
+  }
+  
+  .social-card-role {
+    color: #888;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+  
+  .social-card-contact {
+    color: #fff;
+    font-size: 0.97rem;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .social-card-contact .fa {
+    margin-right: 8px;
+    color: #1abc9c;
+  }
+  
+  .socials-view-btn {
+    background: #1abc9c;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 0;
+    width: 100%;
+    display: block;
+    letter-spacing: 1px;
+    transition: background 0.2s;
+    cursor: pointer;
+    margin: 0p auto;
+  }
+  
+  .socials-view-btn:hover {
+    background: #159c82;
+  }
+  
+  @media (max-width: 1100px) {
+    .socials-list {
+      gap: 18px;
+    }
+    .social-card {
+      width: 220px;
+      min-height: 340px;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .socials-list {
+      flex-direction: column;
+      align-items: center;
+    }
+    .social-card {
+      width: 90vw;
+      min-width: 220px;
+      max-width: 350px;
+    }
+  }
