@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Services.css';
-import chevron from '../../assets/chevron.png'; // Use your own chevron/hexagon icon
+import chevron from '../../assets/chevron.png'; 
 
 const services = [
   {

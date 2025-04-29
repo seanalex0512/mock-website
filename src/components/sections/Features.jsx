@@ -2,54 +2,60 @@ import React from 'react';
 import '../styles/Features.css';
 import squares from '../../assets/squares.png';
 
-const features = [
-  {
-    icon: <i className="fa fa-desktop" aria-hidden="true"></i>,
-    title: 'RESPONSIVE & MULTIPURPOSE',
-    desc: 'Proin in magna a ipsum viverra scelerisq enec turp. Nunc vestibulum fringilla accumsan ornare quis.',
-    button: 'READ MORE',
-    active: false,
-  },
-  {
-    icon: <i className="fa fa-puzzle-piece" aria-hidden="true"></i>,
-    title: 'EASY CUSTOMIZATION',
-    desc: 'Proin in magna a ipsum viverra scelerisq enec turp. Nunc vestibulum fringilla accumsan ornare quis.',
-    button: 'READ MORE',
-    active: true,
-  },
-  {
-    icon: <i className="fa fa-support" aria-hidden="true"></i>,
-    title: 'AWESOME FRIENDLY SUPPORT',
-    desc: 'Proin in magna a ipsum viverra scelerisq enec turp. Nunc vestibulum fringilla accumsan ornare quis.',
-    button: 'READ MORE',
-    active: false,
-  },
-];
-
 const Features = () => {
+  const features = [
+    {
+      id: 1,
+      icon: "desktop",
+      title: "RESPONSIVE & MULTIPURPOSE",
+      description: "Proin in magna a ipsum viverra scelerisq enec turp. Nunc vestibulum fringilla accumsan ornare quis.",
+      buttonColor: "grey"
+    },
+    {
+      id: 2,
+      icon: "puzzle-piece",
+      title: "EASY CUSTOMIZATION",
+      description: "Proin in magna a ipsum viverra scelerisq enec turp. Nunc vestibulum fringilla accumsan ornare quis.",
+      buttonColor: "teal"
+    },
+    {
+      id: 3,
+      icon: "search",
+      title: "AWESOME FRIENDLY SUPPORT",
+      description: "Proin in magna a ipsum viverra scelerisq enec turp. Nunc vestibulum fringilla accumsan ornare quis.",
+      buttonColor: "grey"
+    }
+  ];
+
   return (
     <section className="features-section">
       <div className="features-header">
-        <div className="features-divider">
-          <span className="features-line" />
-          <img src={squares} alt="" className="features-squares" />
-          <span className="features-title">
-            WHAT WE <span className="features-offer">OFFER</span>
-          </span>
-          <img src={squares} alt="" className="features-squares" />
-          <span className="features-line" />
+        <span className="double-line"></span>
+        <div className="title-container">
+          <img src={squares} alt="Squares" className="squares-left" />
+          <h2 className="features-title">
+            WHAT WE <span>OFFER</span>
+          </h2>
+          <img src={squares} alt="Squares" className="squares-right" />
         </div>
-        <p className="features-subtitle">
-          We offer our customers the best services &amp; solutions, this is our main services list
-        </p>
+        <span className="double-line"></span>
       </div>
-      <div className="features-list">
-        {features.map((feature, idx) => (
-          <div className={`feature-card${feature.active ? ' active' : ''}`} key={idx}>
-            <div className="feature-icon">{feature.icon}</div>
+      
+      <p className="features-subtitle">
+        We offer our customers the best services & solutions, this is our main services list
+      </p>
+      
+      <div className="features-container">
+        {features.map((feature) => (
+          <div key={feature.id} className="feature-card">
+            <div className={`feature-icon ${feature.id === 2 ? 'teal-bg' : 'dark-bg'}`}>
+              <i className={`fa fa-${feature.icon}`}></i>
+            </div>
             <h3 className="feature-title">{feature.title}</h3>
-            <p className="feature-desc">{feature.desc}</p>
-            <button className={`feature-btn${feature.active ? ' active' : ''}`}>{feature.button}</button>
+            <p className="feature-description">{feature.description}</p>
+            <button className={`read-more-btn ${feature.buttonColor === 'teal' ? 'teal-btn' : 'grey-btn'}`}>
+              READ MORE
+            </button>
           </div>
         ))}
       </div>

@@ -6,6 +6,14 @@ import Features from './Features';
 
 
 const Hero = () => {
+  const handleArrowClick = () => {
+    const featuresSection = document.getElementById("features");
+    if (featuresSection) {
+      featuresSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+
   return (
     <div className="hero-bg">
       <div className="hero-content">
@@ -25,7 +33,13 @@ const Hero = () => {
         </div>
         <div className="hero-down">
         <div className="hero-down">
-         <img src={arrow} alt="Down arrow" className="down-arrow-img" />
+        <img
+            src={arrow}
+            alt="Down arrow"
+            className="down-arrow-img"
+            onClick={handleArrowClick}
+            style={{ cursor: 'pointer' }}
+          />
           </div>
         </div>
       </div>

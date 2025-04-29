@@ -37,37 +37,57 @@ const team = [
 const Socials = () => {
   return (
     <section className="socials-section">
-    <div className="socials-container">
-      <div className="socials-list">
-        {team.map((member, idx) => (
-          <div className={`social-card${member.highlight ? ' highlight' : ''}`} key={idx}>
-            <div className="social-card-top">
-              {member.socials ? (
-                <img src={member.socials} alt="Socials" className="socials-icons-img" />
-              ) : (
-                <div className="socials-photo-placeholder" />
-              )}
-            </div>
-            <div className="social-card-bottom">
-              <div className="social-card-name-bg">
-                <span className="social-card-name-btn">{member.name}</span>
+      <div className="socials-container">
+        <div className="socials-list">
+          {team.map((member, idx) => (
+            <div className="social-card" key={idx}>
+              <div 
+                className="social-card-top"
+                style={{ backgroundColor: member.highlight ? '#06BDB4' : '#747474' }}
+              >
+                {member.socials ? (
+                  <img src={member.socials} alt="Socials" className="socials-icons-img" />
+                ) : (
+                  <div className="socials-photo-placeholder" />
+                )}
               </div>
-              <div className="social-card-role">{member.role}</div>
-              <div className="social-card-contact">
-                <div>
-                  <span className="fa fa-envelope" /> {member.email}
+              <div 
+                className="social-card-bottom"
+                style={{ backgroundColor: '#333333' }}
+              >
+                <div className="social-card-name-container">
+                  <div 
+                    className="social-card-name-btn"
+                    style={{ 
+                      backgroundColor: member.highlight ? '#333333' : '#06BDB4',
+                      position: 'relative',
+                      top: '-24px',
+                      marginBottom: '-12px'
+                    }}
+                  >
+                    {member.name}
+                  </div>
                 </div>
-                <div>
-                  <span className="fa fa-phone" /> {member.phone}
+                <div className="social-card-role">
+                  {member.role}
+                </div>
+                <hr className="social-card-divider" />
+                
+                <div className="social-card-contact">
+                  <div>
+                    <span className="fa fa-envelope" /> {member.email}
+                  </div>
+                  <div>
+                    <span className="fa fa-phone" /> {member.phone}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <button className="socials-view-btn">VIEW ALL WORKS</button>
       </div>
-      <button className="socials-view-btn">VIEW ALL WORKS</button>
-    </div>
-  </section>
+    </section>
   );
 };
 

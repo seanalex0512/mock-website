@@ -1,0 +1,30 @@
+.footer {
+    background: #2d2d2d;
+    color: #ccc;
+    text-align: center;
+    padding: 40px 0 0 0;
+  }
+  
+  .footer-logo img {
+    width: 227px;
+    height: 105px;
+    object-fit: contain;
+    margin: 0 10px 20px 0px;
+    display: inline-block;
+    opacity: 0.3;
+    filter: grayscale(100%);
+    transition: opacity 0.3s, filter 0.3s;
+  }
+  
+  .footer-logo img.active {
+    opacity: 1;
+    filter: none;
+  }
+  
+  .footer-copyright {
+    background: #222;
+    color: #aaa;
+    font-size: 13px;
+    padding: 40px 0 40px 0;
+    border-top: 1px solid #333;
+  }
