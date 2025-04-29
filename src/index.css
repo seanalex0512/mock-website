@@ -66,3 +66,37 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.skills-diamond-bridge {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  z-index: 20;
+  top: 0;
+  transform: translateY(-48%);
+}
+
+.skills-diamond-shape {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  background-color: #1abc9c;
+  transform: rotate(45deg);
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.skills-diamond-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  object-fit: contain;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/Skills.css';
 import squares from '../../assets/squares.png';
+import phone from '../../assets/phone.png'; 
 
 const skills = [
   { label: 'WEB DESIGN', value: 75 },
@@ -13,6 +14,7 @@ const skills = [
 
 const Skills = () => {
   return (
+    
     <section className="skills-section">
       <div className="skills-header">
       <div className="skills-divider">

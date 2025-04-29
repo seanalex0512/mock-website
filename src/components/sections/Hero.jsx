@@ -20,13 +20,13 @@ const Hero = () => {
         <p className="hero-subtitle">WHAT ARE YOU WAITING FOR ?</p>
         <h1 className="hero-title">LET'S BE CREATIVE !</h1>
         <div className="hero-bar">
-          <em>LOREM IPSUM DOLOR SI AMET</em>
+          <p className='hero-bar-text'>LOREM IPSUM DOLOR SI AMET</p>
         </div>
         <div className="hero-divider">
           <span className="double-line" />
           <img src={squares} alt="" className="squares-icon" />
           <span className="hero-start">
-            <span className="start-text">START</span> DOING THAT
+            <span className="start-text">START</span>  DOING THAT
           </span>
           <img src={squares} alt="" className="squares-icon" />
           <span className="double-line" />

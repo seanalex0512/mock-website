@@ -1,8 +1,43 @@
 .skills-section {
-    background: #333;
-    padding: 60px 0 40px 0;
-    text-align: center;
-    color: #fff;
+  background: #333;
+  padding: 60px 0 40px 0;
+  text-align: center;
+  color: #fff;
+  margin-top: -62px; /* Add this line */
+  position: relative; /* Good practice for stacking context */
+  z-index: 1;
+}
+
+  .skills-diamond-container {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 0.5rem auto;
+    z-index: 10;
+  }
+  
+  .skills-diamond-shape {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #1abc9c; /* Teal */
+    transform: rotate(45deg);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  
+  .skills-diamond-icon {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 28px;
+    height: 28px;
+    transform: translate(-50%, -50%) ;
+    z-index: 2;
+    object-fit: contain;
   }
   
   .skills-header {

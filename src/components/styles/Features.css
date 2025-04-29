@@ -151,6 +151,34 @@
   }
 }
 
+.double-lines {
+  display: inline-block;
+  width: 20%;
+  height: 12px;
+  position: relative;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+.double-lines::before,
+.double-lines::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #c2c2c2;
+  border-radius: 1px;
+}
+
+.double-lines::before {
+  top: 0;
+}
+
+.double-lines::after {
+  top: 6px; 
+}
+
 
 
 

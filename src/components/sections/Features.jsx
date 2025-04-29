@@ -28,9 +28,9 @@ const Features = () => {
   ];
 
   return (
-    <section className="features-section">
+    <section className="features-section" id='features'>
       <div className="features-header">
-        <span className="double-line"></span>
+        <span className="double-lines"></span>
         <div className="title-container">
           <img src={squares} alt="Squares" className="squares-left" />
           <h2 className="features-title">
@@ -38,7 +38,7 @@ const Features = () => {
           </h2>
           <img src={squares} alt="Squares" className="squares-right" />
         </div>
-        <span className="double-line"></span>
+        <span className="double-lines"></span>
       </div>
       
       <p className="features-subtitle">
@@ -59,6 +59,8 @@ const Features = () => {
           </div>
         ))}
       </div>
+
+      
     </section>
   );
 };

@@ -9,11 +9,17 @@ import Services from './components/sections/Services';
 import Socials from './components/sections/Socials';
 import Form from './components/sections/Form';
 import Footer from './components/sections/Footer';
+import phone from './assets/phone.png'; 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Hero />
     <Features />
+    {/* Diamond bridge between Features and Skills */}
+  <div className="skills-diamond-bridge">
+    <div className="skills-diamond-shape"></div>
+    <img src={phone} alt="Phone" className="skills-diamond-icon" />
+  </div>
     <Skills />
     <Services />
     <Socials />
