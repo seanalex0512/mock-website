@@ -4,9 +4,27 @@ import '../styles/Form.css';
 import quotation from '../../assets/quotation.png';
 import leftRight from '../../assets/left-right.png';
 
+const OCCUPATIONS = [
+  "Student",
+  "Designer",
+  "Engineer",
+  "Doctor",
+  "Software Developer",
+  "Self-employed",
+  "Unemployed",
+  "Other"
+];
+
 const Form = () => {
   const form = useRef();
   const [status, setStatus] = useState('');
+  const [occupation, setOccupation] = useState('');
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  // Filtered list based on input
+  const filteredOccupations = OCCUPATIONS.filter(occ =>
+    occ.toLowerCase().includes(occupation.toLowerCase())
+  );
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -22,6 +40,7 @@ const Form = () => {
       (result) => {
         setStatus('Message sent!');
         form.current.reset();
+        setOccupation('');
       },
       (error) => {
         setStatus('Failed to send. Please try again.');
@@ -29,22 +48,71 @@ const Form = () => {
     );
   };
 
+  // Close dropdown when clicking outside
+  React.useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (!e.target.closest('.occupation-group')) {
+        setDropdownOpen(false);
+      }
+    };
+    if (dropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [dropdownOpen]);
+
   return (
     <div className="form-wrapper">
       <section className="form-section">
-       
         <div className="form-card">
-        <h2 className="form-title">
-          Register Your Interest
-        </h2>
-          <form className="interest-form" ref={form} onSubmit={sendEmail}>
+          <h2 className="form-title">
+            Register Your Interest
+          </h2>
+          <form className="interest-form" ref={form} onSubmit={sendEmail} autoComplete="off">
             <div className="form-row">
               <div className="form-group">
                 <input type="text" name="name" placeholder="Name" required />
               </div>
               <div className="form-group occupation-group">
-                <input type="text" name="occupation" placeholder="Occupation" required />
-                <span className="custom-select-icon">&#9660;</span>
+                <input
+                  type="text"
+                  name="occupation"
+                  placeholder="Occupation"
+                  value={occupation}
+                  required
+                  autoComplete="off"
+                  onChange={e => {
+                    setOccupation(e.target.value);
+                    setDropdownOpen(true);
+                  }}
+                  onFocus={() => setDropdownOpen(true)}
+                />
+                <span
+                  className="custom-select-icon"
+                  onClick={() => setDropdownOpen((open) => !open)}
+                  tabIndex={0}
+                  style={{ cursor: 'pointer' }}
+                  aria-label="Show occupation options"
+                >
+                  &#9660;
+                </span>
+                {dropdownOpen && filteredOccupations.length > 0 && (
+                  <ul className="custom-dropdown">
+                    {filteredOccupations.map((occ) => (
+                      <li
+                        key={occ}
+                        onClick={() => {
+                          setOccupation(occ);
+                          setDropdownOpen(false);
+                        }}
+                      >
+                        {occ}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </div>
             <div className="form-row">
@@ -66,8 +134,6 @@ const Form = () => {
             {status && <div className="form-status">{status}</div>}
           </form>
         </div>
-        
-        {/* Quote icon at the junction */}
         <div className="quote-container">
           <div className="diamond-shape"></div>
           <img src={quotation} alt="Quote" className="quote-image" />
@@ -79,7 +145,7 @@ const Form = () => {
         <div className="testimonial-container">
           <div className="testimonial-badge">
             <span className="badge-name">ALEXIS SIMPSON</span>
-            <span className="badge-title">CEO & Developer</span>
+            <span className="badge-title">-CEO & Developer</span>
           </div>
           <div className="testimonial-quote">
             <p>

@@ -1,11 +1,9 @@
-/* Form wrapper to contain both parts */
 .form-wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-/* Form Section */
 .form-section {
   background: #f5f7fa;
   padding: 48px 0 60px;
@@ -16,16 +14,12 @@
 .form-title {
   text-align: start;
   font-size: 3.2rem;
-  font-weight: 400;
+  font-weight: 500;
   color: #06BDB4;
   margin-bottom: 32px;
   margin-top: 0px;
-  text-align: start;
   letter-spacing: 1px;
   font-style: italic;
-  font-style: bold;
-  font-weight: 500;
-   
 }
 
 .form-title span {
@@ -38,7 +32,7 @@
   background: #fff;
   border: 1px solid #d3d6db;
   border-radius: 4px;
-  width: 1100px; /* Fixed width based on screenshot */
+  width: 1100px;
   max-width: 90%;
   margin: 0 auto;
   padding: 40px;
@@ -49,12 +43,12 @@
 .interest-form {
   display: flex;
   flex-direction: column;
-  gap: 30px; /* Increased gap between rows */
+  gap: 30px;
 }
 
 .form-row {
   display: flex;
-  gap: 30px; /* Increased gap between inputs */
+  gap: 30px;
   width: 100%;
 }
 
@@ -66,7 +60,7 @@
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 16px; /* Increased padding */
+  padding: 16px;
   border: 1px solid #d3d6db;
   border-radius: 4px;
   font-size: 1rem;
@@ -80,7 +74,7 @@
 }
 
 .form-group textarea {
-  height: 120px; /* Fixed height for textarea */
+  height: 120px;
 }
 
 .form-group input:focus,
@@ -88,10 +82,30 @@
   border-color: #06BDB4;
 }
 
+/* Occupation dropdown styles */
 .occupation-group {
   display: flex;
   align-items: center;
   position: relative;
+}
+
+.occupation-group select {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #d3d6db;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #f5f7fa;
+  color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  font-family: inherit;
+}
+
+.occupation-group select:focus {
+  border-color: #06BDB4;
 }
 
 .custom-select-icon {
@@ -129,7 +143,7 @@
   letter-spacing: 1px;
   transition: background 0.2s;
   cursor: pointer;
-  margin-left: 0; /* Align to left */
+  margin-left: 0;
   margin-right: auto;
   text-transform: uppercase;
 }
@@ -145,7 +159,6 @@
   font-weight: 600;
 }
 
-/* Quote container at the junction */
 .quote-container {
   position: absolute;
   bottom: -25px;
@@ -173,7 +186,6 @@
   object-fit: contain;
 }
 
-/* Testimonial Part */
 .testimonial-part {
   background-color: #06BDB4;
   padding: 77px 0 60px;
@@ -256,4 +268,78 @@
   .form-submit-btn {
     width: 100%;
   }
+}
+
+.occupation-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.occupation-group input[name="occupation"] {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #d3d6db;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #f5f7fa;
+  color: #333;
+  outline: none;
+  font-family: inherit;
+  cursor: text;
+}
+
+.occupation-group input[name="occupation"]:focus {
+  border-color: #06BDB4;
+}
+
+.custom-select-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  background-color: #333;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  border-radius: 2px;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.custom-dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #d3d6db;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 10;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-dropdown li {
+  padding: 12px 16px;
+  cursor: pointer;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.custom-dropdown li:hover {
+  background: #f0f0f0;
+}
+
+.form-error {
+  color: #d32f2f;
+  font-size: 0.95em;
+  margin-top: 4px;
+  text-align: left;
 }
