@@ -34,7 +34,7 @@
 
 .skills-diamond-icon {
   position: absolute;
-  top:50%;
+  top: 50%;
   left: 50%;
   width: 28px;
   height: 28px;
@@ -144,7 +144,7 @@
   letter-spacing: 1px;
 }
 
-/* Tablet */
+/* Tablet (existing) */
 @media (max-width: 900px) {
   .skills-list {
     gap: 24px;
@@ -159,7 +159,27 @@
   }
 }
 
-/* Mobile: 2 columns */
+/* New media query for 768px */
+@media (max-width: 768px) {
+  .skill-circle {
+    width: 80px; /* Slightly smaller to fit better */
+    height: 80px;
+  }
+  .skill-value {
+    font-size: 1.5rem; /* Reduced font size to prevent touching the edge */
+  }
+  .skill-label {
+    font-size: 0.95rem; /* Slightly smaller label for balance */
+  }
+  .skills-list {
+    gap: 20px;
+  }
+  .skill-item {
+    width: 130px;
+  }
+}
+
+/* Mobile: 2 columns (existing) */
 @media (max-width: 600px) {
   .skills-section {
     padding: 32px 0 20px 0;
@@ -212,7 +232,7 @@
   }
 }
 
-/* Very small screens: 1 column */
+/* Very small screens: 1 column (existing) */
 @media (max-width: 400px) {
   .skills-list {
     display: flex;

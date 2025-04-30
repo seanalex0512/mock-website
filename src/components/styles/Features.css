@@ -84,7 +84,7 @@
 .features-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Prevent wrapping on larger screens */
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
@@ -94,8 +94,8 @@
 }
 
 .feature-card {
-  flex: 1 1 300px;
-  min-width: 0;
+  flex: 1 1 0; /* Evenly distribute space */
+  min-width: 300px; /* Minimum width to ensure content doesn’t collapse */
   max-width: 350px;
   width: 100%;
   display: flex;
@@ -104,6 +104,7 @@
   padding: 20px;
   box-sizing: border-box;
   background: transparent;
+  min-height: 400px; /* Consistent height across cards */
 }
 
 .feature-icon {
@@ -141,6 +142,12 @@
   color: #777;
   line-height: 1.6;
   margin-bottom: 20px;
+  min-height: 100px; /* Increased to ensure enough space for text */
+  flex: 1; /* Allow description to grow and take up remaining space */
+  display: flex;
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  text-align: center;
 }
 
 .read-more-btn {
@@ -151,6 +158,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s;
+  margin-top: auto; /* Pushes the button to the bottom of the card */
 }
 
 .grey-btn {
@@ -179,7 +187,11 @@
     padding: 0 8px;
   }
   .feature-card {
-    max-width: 100%;
+    min-width: 250px; /* Slightly reduce min-width for better fit */
+    min-height: 380px; /* Adjusted for smaller screens */
+  }
+  .feature-description {
+    min-height: 120px; /* Increased to accommodate text wrapping */
   }
   .double-lines {
     width: 36px;
@@ -212,7 +224,8 @@
     margin-bottom: 30px;
   }
   .features-container {
-    flex-direction: column;
+    flex-direction: column; /* Stack vertically on mobile */
+    flex-wrap: wrap; /* Allow wrapping for stacked layout */
     align-items: center;
     gap: 16px;
     max-width: 100vw;
@@ -223,12 +236,14 @@
     max-width: 100%;
     min-width: 0;
     padding: 12px;
+    min-height: auto; /* Remove min-height for mobile */
   }
   .feature-title {
     font-size: 1rem;
   }
   .feature-description {
     font-size: 0.95rem;
+    min-height: auto; /* Remove min-height for mobile */
   }
   .feature-icon {
     width: 70px;
