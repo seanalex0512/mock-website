@@ -4,6 +4,9 @@
   text-align: center;
   padding: 40px 0 0 0;
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  z-index: 1; 
 }
 
 .footer-carousel {
@@ -56,8 +59,11 @@
   background: #222;
   color: #aaa;
   font-size: 13px;
-  padding: 40px 0 40px 0;
+  padding: 40px 0;
   border-top: 1px solid #333;
+  width: 100%;
+  position: relative;
+  bottom: 0;
 }
 
 /* Responsive styles */
@@ -89,3 +95,4 @@
     padding: 24px 0 24px 0;
   }
 }
+

@@ -77,12 +77,13 @@
 
 .social-card-name-container {
   position: absolute;
-  top: 275px;
   left: 0;
   right: 0;
   display: flex;
   justify-content: center;
   z-index: 10;
+  top: 67%; /* Overlaps the border between top and bottom */
+  pointer-events: none;
 }
 
 .social-card-name-btn {
@@ -95,6 +96,7 @@
   display: inline-block;
   border: none;
   transition: all 0.2s;
+  pointer-events: auto;
 }
 
 .social-card.highlight .social-card-name-btn {
@@ -106,21 +108,26 @@
   font-size: 0.95rem;
   margin-top: 0;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .social-card-divider {
-  width: 120px;
-  height: 1px;
-  background-color: #ffffff;
+  width: 40%; /* Relative width for all screens */
+  min-width: 60px;
+  max-width: 160px;
+  height: 2px;
+  background-color: #fff;
   border: none;
   margin: 8px auto 16px auto;
-  opacity: 0.6;
+  opacity: 0.9;
+  border-radius: 1px;
+  transition: width 0.2s;
 }
 
 .social-card-contact {
   color: #9ca3af;
   font-size: 0.9rem;
-  text-align: left;
+  text-align: center; /* Center the text */
   width: 100%;
   margin-top: 4px;
 }
@@ -129,6 +136,7 @@
   margin-bottom: 6px;
   display: flex;
   align-items: center;
+  justify-content: center; /* Center icon + text horizontally */
 }
 
 .social-card-contact .fa {
@@ -173,15 +181,13 @@
     height: 140px;
   }
   .social-card-name-container {
-    top: 200px;
+    top: 62%;
   }
 }
 
 /* Tablet and below */
 @media (max-width: 800px) {
   .socials-list {
-    flex-direction: column;
-    align-items: center;
     gap: 18px;
     width: 100%;
     padding: 0 2vw;
@@ -198,7 +204,7 @@
     max-height: 220px;
   }
   .social-card-name-container {
-    top: calc(38vw - 20px);
+    top: 60%;
   }
 }
 
@@ -219,18 +225,16 @@
     height: auto;
   }
   .social-card-name-container {
-    top: calc(36vw - 18px);
+    top: 53%;
   }
   .social-card-name-btn {
     font-size: 0.95rem;
     padding: 6px 10px;
   }
-  .social-card-divider {
-    width: 60px;
-  }
   .social-card-role,
   .social-card-contact {
     font-size: 0.85rem;
+    margin-top: 1px;
   }
   .socials-icons-img {
     max-width: 80px;
@@ -250,6 +254,6 @@
     max-height: 100px;
   }
   .social-card-name-container {
-    top: calc(32vw - 12px);
+    top: 56%;
   }
 }

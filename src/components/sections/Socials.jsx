@@ -71,8 +71,7 @@ const Socials = () => {
                 <div className="social-card-role">
                   {member.role}
                 </div>
-                <hr className="social-card-divider" />
-                
+                <div className="social-card-divider"></div>                
                 <div className="social-card-contact">
                   <div>
                     <span className="fa fa-envelope" /> {member.email}

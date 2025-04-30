@@ -2,7 +2,6 @@ import React from 'react';
 import '../styles/Hero.css';
 import squares from '../../assets/squares.png';
 import arrow from '../../assets/arrow.png';
-import Features from './Features';
 
 
 const Hero = () => {
