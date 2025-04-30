@@ -2,12 +2,17 @@
   background: #181b20;
   padding: 48px 0 60px 0;
   text-align: center;
+  width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .socials-container {
   max-width: 1300px;
   margin: 0 auto 36px auto;
   padding: 0 24px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .socials-list {
@@ -16,23 +21,26 @@
   gap: 32px;
   flex-wrap: wrap;
   margin-bottom: 32px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .social-card {
   background: transparent;
   border: 1px solid #888;
   border-radius: 4px;
-  width: 270px; 
+  width: 270px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   transition: box-shadow 0.2s;
-  position: relative; 
+  position: relative;
+  box-sizing: border-box;
 }
 
 .social-card-top {
   background: #747474;
-  height: 270px; 
+  height: 270px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,22 +67,22 @@
 .social-card-bottom {
   background: #333333;
   color: #fff;
-  padding: 30px 16px 16px 16px; 
-  height: 140px; 
+  padding: 30px 16px 16px 16px;
+  height: 140px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .social-card-name-container {
   position: absolute;
-  top: 275px; /* Adjusted to position higher */
+  top: 275px;
   left: 0;
   right: 0;
   display: flex;
   justify-content: center;
-  z-index: 10; /* Ensure it's above other elements */
+  z-index: 10;
 }
 
 .social-card-name-btn {
@@ -150,6 +158,7 @@
   background: #05a69e;
 }
 
+/* Large tablet */
 @media (max-width: 1100px) {
   .socials-list {
     gap: 18px;
@@ -168,14 +177,79 @@
   }
 }
 
+/* Tablet and below */
 @media (max-width: 800px) {
   .socials-list {
     flex-direction: column;
     align-items: center;
+    gap: 18px;
+    width: 100%;
+    padding: 0 2vw;
+    box-sizing: border-box;
   }
   .social-card {
-    width: 90vw;
-    min-width: 220px;
+    width: 100%;
+    min-width: 0;
     max-width: 350px;
+  }
+  .social-card-top {
+    height: 38vw;
+    min-height: 120px;
+    max-height: 220px;
+  }
+  .social-card-name-container {
+    top: calc(38vw - 20px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .social-card {
+    width: 100%;
+    max-width: 99vw;
+    min-width: 0;
+  }
+  .social-card-top {
+    height: 36vw;
+    min-height: 90px;
+    max-height: 160px;
+  }
+  .social-card-bottom {
+    padding: 18px 6px 10px 6px;
+    height: auto;
+  }
+  .social-card-name-container {
+    top: calc(36vw - 18px);
+  }
+  .social-card-name-btn {
+    font-size: 0.95rem;
+    padding: 6px 10px;
+  }
+  .social-card-divider {
+    width: 60px;
+  }
+  .social-card-role,
+  .social-card-contact {
+    font-size: 0.85rem;
+  }
+  .socials-icons-img {
+    max-width: 80px;
+    max-height: 40px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 350px) {
+  .social-card {
+    width: 100%;
+    max-width: 100vw;
+  }
+  .social-card-top {
+    height: 32vw;
+    min-height: 60px;
+    max-height: 100px;
+  }
+  .social-card-name-container {
+    top: calc(32vw - 12px);
   }
 }

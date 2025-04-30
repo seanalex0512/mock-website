@@ -82,7 +82,6 @@
   border-color: #06BDB4;
 }
 
-/* Occupation dropdown styles */
 .occupation-group {
   display: flex;
   align-items: center;
@@ -106,174 +105,6 @@
 
 .occupation-group select:focus {
   border-color: #06BDB4;
-}
-
-.custom-select-icon {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #fff;
-  background-color: #333;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.7rem;
-  border-radius: 2px;
-  pointer-events: none;
-}
-
-.full-width {
-  flex: 1 1 100%;
-}
-
-.form-submit-btn {
-  margin-top: 10px;
-  background: #06BDB4;
-  color: #fff;
-  font-weight: 600;
-  font-size: 0.9rem;
-  border: none;
-  border-radius: 2px;
-  padding: 14px 0;
-  width: 220px;
-  display: block;
-  letter-spacing: 1px;
-  transition: background 0.2s;
-  cursor: pointer;
-  margin-left: 0;
-  margin-right: auto;
-  text-transform: uppercase;
-}
-
-.form-submit-btn:hover {
-  background: #05a69e;
-}
-
-.form-status {
-  margin-top: 16px;
-  text-align: left;
-  color: #06BDB4;
-  font-weight: 600;
-}
-
-.quote-container {
-  position: absolute;
-  bottom: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  width: 50px;
-  height: 50px;
-}
-
-.diamond-shape {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background-color: #333;
-  transform: rotate(45deg);
-  z-index: 1;
-}
-
-.quote-image {
-  position: relative;
-  z-index: 2;
-  width: 25px;
-  height: 53.25px;
-  object-fit: contain;
-}
-
-.testimonial-part {
-  background-color: #06BDB4;
-  padding: 77px 0 60px;
-  color: white;
-  text-align: center;
-  position: relative;
-  width: 100%;
-}
-
-.testimonial-container {
-  max-width: 837px;
-  margin: 0 auto;
-  padding: 0 20px;
-  position: relative;
-}
-
-.testimonial-badge {
-  background-color: #f5f5f5;
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.badge-name {
-  color: #06BDB4;
-  font-weight: 600;
-  margin-right: 5px;
-}
-
-.badge-title {
-  color: #777;
-  font-size: 0.9em;
-}
-
-.testimonial-quote {
-  font-style: italic;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  max-width: 836px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.testimonial-nav {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.nav-arrows {
-  height: 30px;
-  object-fit: contain;
-}
-
-@media (max-width: 1200px) {
-  .form-card {
-    width: 90%;
-  }
-}
-
-@media (max-width: 768px) {
-  .form-card {
-    padding: 30px 20px;
-    width: 90%;
-  }
-  
-  .form-title {
-    font-size: 2.5rem;
-    margin-top: 100px;
-  }
-  
-  .form-row {
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .form-submit-btn {
-    width: 100%;
-  }
-}
-
-.occupation-group {
-  display: flex;
-  align-items: center;
-  position: relative;
 }
 
 .occupation-group input[name="occupation"] {
@@ -337,9 +168,222 @@
   background: #f0f0f0;
 }
 
+.full-width {
+  flex: 1 1 100%;
+}
+
+.form-submit-btn {
+  margin-top: 10px;
+  background: #06BDB4;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 2px;
+  padding: 14px 0;
+  width: 220px;
+  display: block;
+  letter-spacing: 1px;
+  transition: background 0.2s;
+  cursor: pointer;
+  margin-left: 0;
+  margin-right: auto;
+  text-transform: uppercase;
+}
+
+.form-submit-btn:hover {
+  background: #05a69e;
+}
+
+.form-status {
+  margin-top: 16px;
+  text-align: left;
+  color: #06BDB4;
+  font-weight: 600;
+}
+
 .form-error {
   color: #d32f2f;
   font-size: 0.95em;
   margin-top: 4px;
   text-align: left;
+}
+
+/* --- Testimonial Section --- */
+.testimonial-part {
+  background-color: #06BDB4;
+  padding: 77px 0 60px;
+  color: white;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+}
+
+.quote-image {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  z-index: 10;
+  background: transparent;
+  pointer-events: none;
+}
+
+.testimonial-container {
+  max-width: 837px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.testimonial-badge {
+  background-color: #f5f5f5;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.badge-name {
+  color: #06BDB4;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.badge-title {
+  color: #777;
+  font-size: 0.9em;
+}
+
+.testimonial-quote {
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 836px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonial-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.nav-arrows {
+  height: 30px;
+  object-fit: contain;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .form-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-card {
+    padding: 30px 20px;
+    width: 90%;
+  }
+  .form-title {
+    font-size: 2.5rem;
+    margin-top: 0;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .form-submit-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-section {
+    padding: 24px 0 32px 0;
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: visible; 
+  }
+  .form-card {
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+    padding: 16px 2vw;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .form-title {
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+  .interest-form {
+    gap: 18px;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+  .form-group input,
+  .form-group textarea {
+    font-size: 1rem;
+    padding: 12px;
+  }
+  .form-group textarea {
+    height: 90px;
+  }
+  .form-submit-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .testimonial-part {
+    padding-top: 40px; 
+    padding-bottom: 32px;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow-x: visible;
+  }
+  .quote-image {
+    width: 36px;
+    height: 36px;
+    top: 0px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+  .testimonial-container {
+    max-width: 98vw;
+    width: 98vw;
+    margin: 0 auto;
+    padding: 0 2vw;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .testimonial-badge {
+    padding: 6px 10px;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+  .testimonial-quote {
+    font-size: 0.98rem;
+    margin-bottom: 12px;
+  }
+  .nav-arrows {
+    height: 24px;
+  }
 }

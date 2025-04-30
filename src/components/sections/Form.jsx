@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import '../styles/Form.css';
-import quotation from '../../assets/quotation.png';
+import quotationSquare from '../../assets/quotation-square.png';
 import leftRight from '../../assets/left-right.png';
 
 const OCCUPATIONS = [
@@ -21,7 +21,6 @@ const Form = () => {
   const [occupation, setOccupation] = useState('');
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  // Filtered list based on input
   const filteredOccupations = OCCUPATIONS.filter(occ =>
     occ.toLowerCase().includes(occupation.toLowerCase())
   );
@@ -29,7 +28,6 @@ const Form = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     setStatus('Sending...');
-
     emailjs.sendForm(
       'service_x9awbp6',
       'template_em9mjr4',
@@ -37,18 +35,17 @@ const Form = () => {
       'CsHL-yZh44mhcwuXM'
     )
     .then(
-      (result) => {
+      () => {
         setStatus('Message sent!');
         form.current.reset();
         setOccupation('');
       },
-      (error) => {
+      () => {
         setStatus('Failed to send. Please try again.');
       }
     );
   };
 
-  // Close dropdown when clicking outside
   React.useEffect(() => {
     const handleClickOutside = (e) => {
       if (!e.target.closest('.occupation-group')) {
@@ -134,14 +131,15 @@ const Form = () => {
             {status && <div className="form-status">{status}</div>}
           </form>
         </div>
-        <div className="quote-container">
-          <div className="diamond-shape"></div>
-          <img src={quotation} alt="Quote" className="quote-image" />
-        </div>
       </section>
-      
-      {/* Testimonial part */}
+
+      {/* Testimonial section with diamond quote image */}
       <div className="testimonial-part">
+        <img
+          src={quotationSquare}
+          alt="Quote Diamond"
+          className="quote-image"
+        />
         <div className="testimonial-container">
           <div className="testimonial-badge">
             <span className="badge-name">ALEXIS SIMPSON</span>
