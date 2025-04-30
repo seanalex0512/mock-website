@@ -68,7 +68,7 @@
   background: #333333;
   color: #fff;
   padding: 30px 16px 16px 16px;
-  min-height: 140px; /* Changed from height to min-height */
+  min-height: 140px; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,7 +82,7 @@
   display: flex;
   justify-content: center;
   z-index: 10;
-  top: 63%; /* Overlaps the border between top and bottom */
+  top: 63%; 
   pointer-events: none;
 }
 
@@ -112,7 +112,7 @@
 }
 
 .social-card-divider {
-  width: 40%; /* Relative width for all screens */
+  width: 40%; 
   min-width: 60px;
   max-width: 160px;
   height: 2px;
@@ -122,13 +122,13 @@
   opacity: 0.9;
   border-radius: 1px;
   transition: width 0.2s;
-  z-index: 1; /* Added to ensure it’s not overlapped */
+  z-index: 1; 
 }
 
 .social-card-contact {
   color: #9ca3af;
   font-size: 0.9rem;
-  text-align: center; /* Center the text */
+  text-align: center; 
   width: 100%;
   margin-top: 4px;
 }
@@ -137,7 +137,7 @@
   margin-bottom: 6px;
   display: flex;
   align-items: center;
-  justify-content: center; /* Center icon + text horizontally */
+  justify-content: center; 
 }
 
 .social-card-contact .fa {
@@ -179,7 +179,7 @@
     height: 220px;
   }
   .social-card-bottom {
-    min-height: 140px; /* Changed from height to min-height */
+    min-height: 140px; 
   }
   .social-card-name-container {
     top: 62%;

@@ -53,7 +53,7 @@
   justify-content: center;
   gap: 12px;
   margin-bottom: 18px;
-  flex-wrap: nowrap; /* Always horizontal */
+  flex-wrap: nowrap; 
 }
 
 .skills-line {
@@ -98,7 +98,7 @@
   box-sizing: border-box;
 }
 
-/* Skill item styles */
+
 .skill-item {
   display: flex;
   flex-direction: column;
@@ -144,7 +144,7 @@
   letter-spacing: 1px;
 }
 
-/* Tablet (existing) */
+
 @media (max-width: 900px) {
   .skills-list {
     gap: 24px;
@@ -159,17 +159,17 @@
   }
 }
 
-/* New media query for 768px */
+
 @media (max-width: 768px) {
   .skill-circle {
-    width: 80px; /* Slightly smaller to fit better */
+    width: 80px; 
     height: 80px;
   }
   .skill-value {
-    font-size: 1.5rem; /* Reduced font size to prevent touching the edge */
+    font-size: 1.5rem; 
   }
   .skill-label {
-    font-size: 0.95rem; /* Slightly smaller label for balance */
+    font-size: 0.95rem; 
   }
   .skills-list {
     gap: 20px;
@@ -179,7 +179,7 @@
   }
 }
 
-/* Mobile: 2 columns (existing) */
+
 @media (max-width: 600px) {
   .skills-section {
     padding: 32px 0 20px 0;
@@ -208,7 +208,7 @@
   .skills-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 12px 8px; /* row gap, column gap */
+    gap: 12px 8px; 
     width: 100vw;
     padding: 0 2vw;
     justify-items: center;
@@ -232,7 +232,7 @@
   }
 }
 
-/* Very small screens: 1 column (existing) */
+
 @media (max-width: 400px) {
   .skills-list {
     display: flex;

@@ -8,7 +8,7 @@
   overflow: visible;
 }
 
-/* Header with lines and title */
+
 .features-header {
   display: flex;
   flex-direction: row;
@@ -22,7 +22,7 @@
 
 .double-lines {
   display: inline-block;
-  width: 20%; /* Fixed width for consistent look */
+  width: 20%; 
   height: 12px;
   position: relative;
   margin: 0 10px;
@@ -80,11 +80,11 @@
   margin: 0 auto 60px;
 }
 
-/* Features Container */
+
 .features-container {
   display: flex;
   justify-content: center;
-  flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+  flex-wrap: nowrap; 
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
@@ -94,8 +94,8 @@
 }
 
 .feature-card {
-  flex: 1 1 0; /* Evenly distribute space */
-  min-width: 300px; /* Minimum width to ensure content doesn’t collapse */
+  flex: 1 1 0; 
+  min-width: 300px; 
   max-width: 350px;
   width: 100%;
   display: flex;
@@ -104,7 +104,7 @@
   padding: 20px;
   box-sizing: border-box;
   background: transparent;
-  min-height: 400px; /* Consistent height across cards */
+  min-height: 400px; 
 }
 
 .feature-icon {
@@ -142,11 +142,11 @@
   color: #777;
   line-height: 1.6;
   margin-bottom: 20px;
-  min-height: 100px; /* Increased to ensure enough space for text */
-  flex: 1; /* Allow description to grow and take up remaining space */
+  min-height: 100px; 
+  flex: 1; 
   display: flex;
-  align-items: center; /* Center text vertically */
-  justify-content: center; /* Center text horizontally */
+  align-items: center; 
+  justify-content: center; 
   text-align: center;
 }
 
@@ -158,7 +158,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s;
-  margin-top: auto; /* Pushes the button to the bottom of the card */
+  margin-top: auto; 
 }
 
 .grey-btn {
@@ -187,11 +187,11 @@
     padding: 0 8px;
   }
   .feature-card {
-    min-width: 250px; /* Slightly reduce min-width for better fit */
-    min-height: 380px; /* Adjusted for smaller screens */
+    min-width: 250px; 
+    min-height: 380px; 
   }
   .feature-description {
-    min-height: 120px; /* Increased to accommodate text wrapping */
+    min-height: 120px; 
   }
   .double-lines {
     width: 36px;
@@ -224,9 +224,8 @@
     margin-bottom: 30px;
   }
   .features-container {
-    flex-direction: column; /* Stack vertically on mobile */
-    flex-wrap: wrap; /* Allow wrapping for stacked layout */
-    align-items: center;
+    flex-direction: column; 
+    flex-wrap: wrap; 
     gap: 16px;
     max-width: 100vw;
     padding: 0 2vw;
@@ -236,14 +235,14 @@
     max-width: 100%;
     min-width: 0;
     padding: 12px;
-    min-height: auto; /* Remove min-height for mobile */
+    min-height: auto; 
   }
   .feature-title {
     font-size: 1rem;
   }
   .feature-description {
     font-size: 0.95rem;
-    min-height: auto; /* Remove min-height for mobile */
+    min-height: auto; 
   }
   .feature-icon {
     width: 70px;

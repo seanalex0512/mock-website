@@ -8,21 +8,21 @@ const features = [
     id: 1,
     icon: "desktop",
     title: "RESPONSIVE & MULTIPURPOSE",
-    description: "Proin in magna a ipsum viverra scelerisq enec turp. Nunc vestibulum fringilla accumsan ornare quis.",
+    description: "Enjoy our designs that work on all device sizes perfectly. Each layout adapts fluidly to screens while maintaining visual appeal across different viewing contexts.",
     buttonColor: "grey"
   },
   {
     id: 2,
     icon: "puzzle-piece",
     title: "EASY CUSTOMIZATION",
-    description: "Proin in magna a ipsum viverra scelerisq enec turp. Nunc vestibulum fringilla accumsan ornare quis.",
+    description: "Modify any element with our intuitive editing tools quickly. Our system provides simple controls allowing you to personalize features without technical knowledge required.",
     buttonColor: "teal"
   },
   {
     id: 3,
     img: friendlySupport,
     title: "AWESOME FRIENDLY SUPPORT",
-    description: "Proin in magna a ipsum viverra scelerisq enec turp. Nunc vestibulum fringilla accumsan ornare quis.",
+    description: "Access our expert team whenever you encounter any issues. Our specialists respond promptly to inquiries ensuring your project continues smoothly without unnecessary delays.",
     buttonColor: "grey"
   }
 ];
