@@ -157,23 +157,4 @@
   margin-top: 10px;
 }
 
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 3rem;
-  }
-  .hero-subtitle,
-  .hero-start,
-  .start-text {
-    font-size: 1.2rem;
-  }
-  .hero-bar {
-    font-size: 1rem;
-    width: 95%;
-  }
-  .line {
-    width: 60px;
-  }
-  .double-line {
-    width: 100px;
-  }
-}
+
