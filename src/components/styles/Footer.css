@@ -8,25 +8,38 @@
 
 .footer-carousel {
   display: flex;
-  align-items: center;
+  align-items: center; /* Vertically center arrows and logos */
   justify-content: center;
   margin-bottom: 20px;
   position: relative;
+  gap: 0; /* Remove any default gap between children */
+}
+
+.footer-arrow-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  cursor: pointer;
+  margin: 0 12px 0 0; /* Right margin for left arrow */
+}
+
+.footer-arrow-img:last-child {
+  margin: 0 0 0 12px; /* Left margin for right arrow */
 }
 
 .footer-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap; /* Responsive: allow wrapping */
+  gap: 32px; /* More space between logos, as in screenshot */
+  flex-wrap: nowrap; /* No wrapping on desktop */
 }
 
 .footer-logo img {
   max-width: 120px;
   width: 100%;
   height: auto;
-  margin: 0 10px 20px 0px;
+  margin: 0;
   display: inline-block;
   opacity: 0.3;
   filter: grayscale(100%);
@@ -37,13 +50,6 @@
 .footer-logo img.active {
   opacity: 1;
   filter: none;
-}
-
-.footer-arrow-img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  cursor: pointer;
 }
 
 .footer-copyright {
@@ -59,13 +65,24 @@
   .footer {
     padding: 24px 0 0 0;
   }
+  .footer-carousel {
+    gap: 0;
+  }
+  .footer-logo {
+    gap: 12px; /* Less space between logos on mobile */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+  }
   .footer-logo img {
     max-width: 80px;
-    margin: 0 6px 12px 0px;
+    margin: 0;
   }
   .footer-arrow-img {
     width: 24px;
     height: 24px;
+    margin: 0 6px 0 0;
+  }
+  .footer-arrow-img:last-child {
+    margin: 0 0 0 6px;
   }
   .footer-copyright {
     font-size: 11px;

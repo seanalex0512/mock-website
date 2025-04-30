@@ -11,10 +11,8 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-carousel">
-        {/* Left arrow, vertically centered */}
         <img src={leftBtn} alt="Previous" className="footer-arrow-img left" />
 
-        {/* Logos row */}
         <div className="footer-logo">
           <img className="faded" src={img1} alt="Company 1" />
           <img className="active" src={img2} alt="Company 2" />
@@ -22,7 +20,6 @@ function Footer() {
           <img className="faded" src={img4} alt="Company 4" />
         </div>
 
-        {/* Right arrow, vertically centered */}
         <img src={rightBtn} alt="Next" className="footer-arrow-img right" />
       </div>
 

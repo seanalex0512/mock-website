@@ -73,30 +73,29 @@ button:focus-visible {
   height: 64px;
   margin: 0 auto;
   z-index: 20;
-  top: 0;
-  transform: translateY(-48%);
+  transform: translateY(-40%); 
 }
 
-.skills-diamond-shape {
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  background-color: #1abc9c;
-  transform: rotate(45deg);
-  top: 0;
-  left: 0;
-  z-index: 1;
-  border-radius: 10px;
+.skills-diamond-img {
+  width: 53px;
+  height: 53px;
+  display: block;
+  margin: 0 auto;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 10px; 
 }
 
-.skills-diamond-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 32px;
-  height: 32px;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  object-fit: contain;
+@media (max-width: 600px) {
+  .features-section {
+    padding-bottom: 60px; 
+    overflow: visible;
+  }
+  .skills-diamond-bridge {
+    width: 40px;
+    height: 30px;
+    transform: translateY(-95%);
+  }
 }
+
+
+

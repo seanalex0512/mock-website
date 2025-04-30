@@ -10,16 +10,16 @@ import Socials from './components/sections/Socials';
 import Form from './components/sections/Form';
 import Footer from './components/sections/Footer';
 import phone from './assets/phone.png'; 
+import phoneSquare from './assets/phone-square.png';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Hero />
     <Features />
     {/* Diamond bridge between Features and Skills */}
-  <div className="skills-diamond-bridge">
-    <div className="skills-diamond-shape"></div>
-    <img src={phone} alt="Phone" className="skills-diamond-icon" />
-  </div>
+    <div className="skills-diamond-bridge">
+  <img src={phoneSquare} alt="Diamond Bridge" className="skills-diamond-img" />
+</div>
     <Skills />
     <Services />
     <Socials />
