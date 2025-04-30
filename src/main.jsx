@@ -9,21 +9,22 @@ import Services from './components/sections/Services';
 import Socials from './components/sections/Socials';
 import Form from './components/sections/Form';
 import Footer from './components/sections/Footer';
-import phone from './assets/phone.png'; 
 import phoneSquare from './assets/phone-square.png';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Hero />
-    <Features />
-    {/* Diamond bridge between Features and Skills */}
-    <div className="skills-diamond-bridge">
-  <img src={phoneSquare} alt="Diamond Bridge" className="skills-diamond-img" />
-</div>
-    <Skills />
-    <Services />
-    <Socials />
-    <Form />
-    <Footer />
+      <Hero />
+      <Features />
+      {/* Diamond bridge between Features and Skills */}
+      <div className="skills-diamond-bridge">
+        <img src={phoneSquare} alt="Diamond Bridge" className="skills-diamond-img" />
+      </div>
+      <div className='page-wrapper'>
+      <Skills />
+      <Services />
+      <Socials />
+      <Form />
+      <Footer />
+      </div>
   </StrictMode>,
 )
