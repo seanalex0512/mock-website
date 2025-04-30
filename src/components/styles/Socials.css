@@ -155,7 +155,7 @@
   border: none;
   border-radius: 6px;
   padding: 14px 0;
-  width: 92%;
+  width: 94%;
   display: block;
   letter-spacing: 1px;
   transition: background 0.2s;
@@ -167,8 +167,8 @@
   background: #05a69e;
 }
 
-/* Large tablet */
-@media (max-width: 1100px) {
+/* Large tablet (iPad Air and Pro adjustments) */
+@media (min-width: 801px) and (max-width: 1100px) {
   .socials-list {
     gap: 18px;
   }
@@ -182,7 +182,14 @@
     min-height: 140px; 
   }
   .social-card-name-container {
-    top: 62%;
+    top: 58%; /* Adjusted to move the name button higher, creating more space */
+  }
+  .social-card-role {
+    margin-top: 8px; /* Add a small gap between name and title */
+    margin-bottom: 10px; /* Add space between title and divider */
+  }
+  .social-card-divider {
+    margin-top: 10px; /* Add space above the divider to prevent overlap with name */
   }
 }
 
