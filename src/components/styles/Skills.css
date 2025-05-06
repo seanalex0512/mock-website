@@ -158,6 +158,9 @@
     width: 90px;
     height: 90px;
   }
+  .skill-value {
+    font-size: 1.5rem; 
+  }
 }
 
 
