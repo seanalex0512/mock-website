@@ -158,7 +158,6 @@
   width: 94%;
   display: block;
   letter-spacing: 1px;
-  transition: background 0.2s;
   cursor: pointer;
   margin: 0 auto;
 }
@@ -182,14 +181,14 @@
     min-height: 140px; 
   }
   .social-card-name-container {
-    top: 58%; /* Adjusted to move the name button higher, creating more space */
+    top: 58%; 
   }
   .social-card-role {
-    margin-top: 8px; /* Add a small gap between name and title */
-    margin-bottom: 10px; /* Add space between title and divider */
+    margin-top: 8px; 
+    margin-bottom: 10px; 
   }
   .social-card-divider {
-    margin-top: 10px; /* Add space above the divider to prevent overlap with name */
+    margin-top: 10px; 
   }
 }
 
@@ -239,7 +238,10 @@
     font-size: 0.95rem;
     padding: 6px 10px;
   }
-  .social-card-role,
+  .social-card-role {
+    font-size: 0.85rem;
+    margin-top: 4px;
+  }
   .social-card-contact {
     font-size: 0.85rem;
     margin-top: 1px;
@@ -264,4 +266,5 @@
   .social-card-name-container {
     top: 56%;
   }
+  
 }

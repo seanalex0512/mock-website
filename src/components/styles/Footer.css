@@ -34,12 +34,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 32px; 
+  gap: 40px; 
   flex-wrap: nowrap; 
 }
 
 .footer-logo img {
-  max-width: 120px;
+  max-width: 140px;
   width: 100%;
   height: auto;
   margin: 0;
@@ -79,7 +79,7 @@
     flex-wrap: wrap; 
   }
   .footer-logo img {
-    max-width: 80px;
+    max-width: 60px;
     margin: 0;
   }
   .footer-arrow-img {

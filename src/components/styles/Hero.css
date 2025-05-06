@@ -167,10 +167,16 @@
   .hero-subtitle {
     font-size: 1.1rem; 
   }
+  .hero-title {
+    font-size: 3.5rem; 
+  }
 }
 
 @media (max-width: 400px) {
   .hero-subtitle {
     font-size: 1rem; 
+  }
+  .hero-title {
+    font-size: 3rem; 
   }
 }

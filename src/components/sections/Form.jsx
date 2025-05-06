@@ -147,8 +147,8 @@ const Form = () => {
           </div>
           <div className="testimonial-quote">
             <p>
-              Lorem ipsum dolor sit amet, laudantium, totam rem. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel 
-              interdum mi sapien ut justo consequat magna, id molestie ipsum volutpat quis
+            In a world driven by patterns and rules, true innovation begins when we dare to imagine differently. 
+            It is not in following the path, but in creating one, that we find purpose, passion, and the power to change everything.
             </p>
           </div>
           <div className="testimonial-nav">
