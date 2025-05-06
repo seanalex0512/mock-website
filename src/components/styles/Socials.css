@@ -1,6 +1,6 @@
 .socials-section {
   background: #181b20;
-  padding: 48px 0 60px 0;
+  padding: 60px 0 60px 0;
   text-align: center;
   width: 100vw;
   box-sizing: border-box;
@@ -9,7 +9,7 @@
 
 .socials-container {
   max-width: 1300px;
-  margin: 0 auto 36px auto;
+  margin: 0 auto 0 auto;
   padding: 0 24px;
   width: 100%;
   box-sizing: border-box;
