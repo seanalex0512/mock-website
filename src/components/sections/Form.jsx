@@ -133,7 +133,7 @@ const Form = () => {
         </div>
       </section>
 
-      {/* Testimonial section with diamond quote image */}
+      {/* Testimonial section  */}
       <div className="testimonial-part">
         <img
           src={quotationSquare}
